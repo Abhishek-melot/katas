@@ -1,8 +1,12 @@
 function wave(str){
     // Code here
-    let result=""
-    for(let i=0;i<str.length;i++){
-        result.push(str.charAt(i).toUpperCase);
+    let result=[];
+    let input=str;
+    for(let i=0;i<input.length;i++){
+        let caps=input.charAt(i).toUpperCase();
+        let newStr=input.replace(input.charAt(i),caps);
+        result.push(newStr);
+        input=str;
     }
     return result;
   }
